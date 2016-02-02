@@ -65,7 +65,8 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: next
 avatar: /images/avatar.jpg
-
+since: 2016
+google_analytics: UA-49550932-3
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

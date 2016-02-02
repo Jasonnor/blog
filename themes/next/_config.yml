@@ -28,7 +28,7 @@ rss:
 menu:
   home: /
   categories: /categories
-  #about: /about
+  about: /about
   archives: /archives
   tags: /tags
   #commonweal: /404.html
@@ -69,8 +69,8 @@ scheme: Pisces
 
 
 # Social links
-# social:
-  #GitHub:
+social:
+  GitHub: https://github.com/Jasonnor
   #Others:
 
 # Social Icons
