@@ -71,4 +71,12 @@ avatar: /images/avatar.jpg
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/Jasonnor/jasonnor.github.io.git
+  repo: git@github.com:Jasonnor/jasonnor.github.io.git
+
+# Feed
+## Using hexo-generator-feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: false
+  hub:
