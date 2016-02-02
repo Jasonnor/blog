@@ -1,0 +1,8 @@
+node_modules/
+public/
+.deploy/
+.deploy_git/
+.npmignore
+db.json
+debug.log
+npm-debug.log
