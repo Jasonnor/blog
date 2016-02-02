@@ -71,4 +71,4 @@ avatar: /images/avatar.jpg
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:Jasonnor/jasonnor.github.io.git
+  repo: https://github.com/Jasonnor/jasonnor.github.io.git
