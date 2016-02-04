@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Blog, Internet, Tech, Program, Software, Computer, IT, Technology, Information"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -71,6 +71,7 @@ scheme: Pisces
 # Social links
 social:
   GitHub: https://github.com/Jasonnor
+  #Facebook: 
   #Others:
 
 # Social Icons
@@ -78,6 +79,7 @@ social_icons:
   enable: true
   # Icon Mappings
   GitHub: github
+  Facebook: facebook
   Twitter: twitter
   Weibo: weibo
 
