@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Blog, Internet, Tech, Program, Software, Computer, IT, Technology, Information"
+keywords: "Blog, Internet, Tech, Program, Software, Computer, IT, Technology, Information, Code"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -71,7 +71,7 @@ scheme: Pisces
 # Social links
 social:
   GitHub: https://github.com/Jasonnor
-  #Facebook: 
+  #Facebook:
   #Others:
 
 # Social Icons
