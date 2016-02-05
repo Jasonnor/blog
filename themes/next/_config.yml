@@ -67,11 +67,13 @@ scheme: Pisces
 # Sidebar Settings
 # ---------------------------------------------------------------
 
+description: 關注互聯網和技術
 
 # Social links
 social:
   GitHub: https://github.com/Jasonnor
   #Facebook:
+  Email: mailto:wujason810@gmail.com
   #Others:
 
 # Social Icons
@@ -81,6 +83,7 @@ social_icons:
   GitHub: github
   Facebook: facebook
   Twitter: twitter
+  Email: envelope
   Weibo: weibo
 
 
@@ -102,8 +105,7 @@ toc:
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-#creative_commons: by-nc-sa
-#creative_commons:
+creative_commons: by
 
 sidebar:
   # Sidebar Position, available value: left | right
