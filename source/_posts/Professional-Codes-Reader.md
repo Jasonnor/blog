@@ -58,9 +58,10 @@ date: 2016-02-03 15:51:00
 ## Todo-List
   + Winform版本支援讀取PDF功能
   + Winform版本用Mono重寫，實現跨平台應用
+  + Extension版本自定義抓取Element功能
   + Extension版本能在右鍵選單使用（可以透過Options關閉）
   + Extension版本點擊第二次按鈕，讓產生的程式碼消失
-  + Options增加每次產生多少段程式碼的選項
+  + Extension版本自訂每次產生多少段程式碼
   + More ...
 
 ## 結語
