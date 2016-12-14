@@ -3,9 +3,10 @@ tags:
   - Tools
   - Software
   - JavaScript
-  - C#
+  - 'C#'
 categories:
   - 個人開發
+author: Jasonnor
 date: 2016-02-03 15:51:00
 ---
 {% asset_img browser.jpg %}
