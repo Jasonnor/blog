@@ -1,13 +1,15 @@
-title: 'Professional Codes Reader: 使你看的東西更專業'
+title: 'Professional Codes Reader : 像專業程序員一樣地瀏覽網頁'
 tags:
   - Tools
   - Software
+  - Extension
   - JavaScript
   - 'C#'
 categories:
   - 個人開發
 author: Jasonnor
 date: 2016-02-03 15:51:00
+updated: 2017-06-16 00:00:00
 ---
 {% asset_img browser.jpg %}
 ## 發想
@@ -31,30 +33,32 @@ date: 2016-02-03 15:51:00
 
 ## 演示
 ### Classic Reader使用前
-![Before](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/Example/Novel_Before.png)
+![Before](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/assets/novel-before.png)
 ### Classic Reader使用後
-![After](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/Example/Novel_After.png)
+![After](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/assets/novel-after.png)
 ### Hacker News使用前
-![After](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/Example/Article_Before.png)
+![Before](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/assets/article-before.png)
 ### Hacker News使用後
-![After](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/Example/Article_After.png)
+![After](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/assets/article-after.png)
 ### Feedly
-![Feedly](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/Example/Demo_Feedly.gif)
+![Feedly](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/assets/demo-feedly.gif)
 
 更多Demo可以到[Repo頁面](https://github.com/Jasonnor/Professional-Codes-Reader)觀看。
 
 ## 使用說明
+![Logo](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/assets/logo440x280.png)
 ### Chrome Extension版本（需要Google Chrome）
-  1. 首先到[Releases頁面](https://github.com/Jasonnor/Professional-Codes-Reader/releases)下載最新版.crx檔案
-  2. 開啟Chrome的[擴充功能頁面](chrome://extensions/)（可以複製到網址列開啟）
-  3. 把第一步下載的crx檔案拖曳到擴充功能畫面中
-  4. 詢問視窗選擇「新增擴充功能」
+  1. 到[這裡](https://chrome.google.com/webstore/detail/professional-codes-reader/bmiklhlglhkagnpamkmdhgpbiolnbgac)安裝擴充功能，然後跳到第六步
+  2. 或者也可以到[Releases頁面](https://github.com/Jasonnor/Professional-Codes-Reader/releases)下載最新版.crx檔案
+  3. 開啟Chrome的[擴充功能頁面](chrome://extensions/)（可以複製到網址列開啟）
+  4. 把第一步下載的crx檔案拖曳到擴充功能畫面中
+  5. 詢問視窗選擇「新增擴充功能」
   {% asset_img add-extension.png Add-Extension %}
-  5. 此時就能在右上角工具列看到一隻羽毛筆的圖標，代表安裝成功
-  6. 點擊圖標就能在當前頁面插入程式碼
-  7. 點擊圖標右鍵可以打開選項畫面，進行動作設定
+  6. 此時就能在右上角工具列看到一隻羽毛筆的圖標，代表安裝成功
+  7. 點擊圖標就能在當前頁面插入程式碼
+  8. 點擊圖標右鍵可以打開選項畫面，進行動作設定
 
-  ![Options](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/Example/Options.png)
+  ![Options](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/assets/options.png)
 
 ## Todo-List
   + Winform版本支援讀取PDF功能
@@ -67,3 +71,6 @@ date: 2016-02-03 15:51:00
 
 ## 結語
 這個業餘項目做得挺開心的，而且實際使用覺得非常有幫助（喂），也是第一次接觸Chrome Extension開發，個人感覺因為文檔完整，社群活躍度又高，基本上入門門檻很低。目前將代辦事項完成後這個項目會告一個段落，有興趣維護改進的朋友也歡迎提出PR！
+
+##### Update at 2017/6/16
+此插件已經正式在Chrome Wedstore上架，可以到[此處](https://chrome.google.com/webstore/detail/professional-codes-reader/bmiklhlglhkagnpamkmdhgpbiolnbgac)進行安裝！
