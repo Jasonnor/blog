@@ -47,3 +47,11 @@ MV中遊戲彈幕展示：
 
 使用中遇到問題也歡迎在Github提出issues或PR協助這個項目，已知Bug清單在這裡可以查看：
 https://github.com/Jasonnor/th-music-video-generator/issues/5
+
+---------------------
+2018/09/10 更新
+
+![RandomPlay](https://i.imgur.com/CmHcrYl.jpg)
+
+1. 加入了隨機播放的功能，點擊右下角齒輪即可設定
+2. 現在可以點擊曲名下面的pid/vid直接前往原圖/影片網址囉！
