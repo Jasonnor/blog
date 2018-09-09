@@ -1,24 +1,22 @@
+/**
+ * group-pictures.js
+ *
+ * Usage:
+ *
+ * {% grouppicture [group]-[layout] %}{% endgrouppicture %}
+ * {% gp [group]-[layout] %}{% endgp %}
+ *
+ * [group]  : Total number of pictures to add in the group.
+ * [layout] : Default picture under the group to show.
+ */
+
 /* global hexo */
-// Usage: {% grouppicture group-layout %}{% endgrouppicture %}
-// Alias: {% gp group-layout %}{% endgp %}
 
-function groupPicture(args, content) {
-  args = args[0].split('-');
-  var group = parseInt(args[0]);
-  var layout = parseInt(args[1]);
-
-  content = hexo.render.renderSync({text: content, engine: 'markdown'});
-
-  var pictures = content.match(/<img[\s\S]*?>/g);
-
-  return '<div class="group-picture">' +
-            templates.dispatch(pictures, group, layout) +
-         '</div>';
-}
+'use strict';
 
 var templates = {
 
-  dispatch: function (pictures, group, layout) {
+  dispatch: function(pictures, group, layout) {
     var fn = 'group' + group + 'Layout' + layout;
     fn = templates[fn] || templates.defaults;
     return fn.call(templates, pictures);
@@ -33,7 +31,7 @@ var templates = {
    * @param pictures
    * @returns {string}
    */
-  group2Layout1: function (pictures) {
+  group2Layout1: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1)
@@ -47,7 +45,7 @@ var templates = {
    *
    * @param pictures
    */
-  group2Layout2: function (pictures) {
+  group2Layout2: function(pictures) {
     return this.getHTML(pictures);
   },
 
@@ -58,7 +56,7 @@ var templates = {
    *
    * @param pictures
    */
-  group3Layout1: function (pictures) {
+  group3Layout1: function(pictures) {
     return this.getHTML(pictures);
   },
 
@@ -70,7 +68,7 @@ var templates = {
    *
    * @param pictures
    */
-  group3Layout2: function (pictures) {
+  group3Layout2: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1)
@@ -85,7 +83,7 @@ var templates = {
    *
    * @param pictures
    */
-  group3Layout3: function (pictures) {
+  group3Layout3: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2)
@@ -101,7 +99,7 @@ var templates = {
    *
    * @param pictures
    */
-  group4Layout1: function (pictures) {
+  group4Layout1: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 3),
@@ -117,7 +115,7 @@ var templates = {
    *
    * @param pictures
    */
-  group4Layout2: function (pictures) {
+  group4Layout2: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1)
@@ -132,7 +130,7 @@ var templates = {
    *
    * @param pictures
    */
-  group4Layout3: function (pictures) {
+  group4Layout3: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2)
@@ -147,7 +145,7 @@ var templates = {
    *
    * @param pictures
    */
-  group4Layout4: function (pictures) {
+  group4Layout4: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3)
@@ -163,7 +161,7 @@ var templates = {
    *
    * @param pictures
    */
-  group5Layout1: function (pictures) {
+  group5Layout1: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 3),
@@ -180,7 +178,7 @@ var templates = {
    *
    * @param pictures
    */
-  group5Layout2: function (pictures) {
+  group5Layout2: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 3),
@@ -196,7 +194,7 @@ var templates = {
    *
    * @param pictures
    */
-  group5Layout3: function (pictures) {
+  group5Layout3: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2)
@@ -211,7 +209,7 @@ var templates = {
    *
    * @param pictures
    */
-  group5Layout4: function (pictures) {
+  group5Layout4: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3)
@@ -227,7 +225,7 @@ var templates = {
    *
    * @param pictures
    */
-  group6Layout1: function (pictures) {
+  group6Layout1: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 3),
@@ -244,7 +242,7 @@ var templates = {
    *
    * @param pictures
    */
-  group6Layout2: function (pictures) {
+  group6Layout2: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 4),
@@ -261,7 +259,7 @@ var templates = {
    *
    * @param pictures
    */
-  group6Layout3: function (pictures) {
+  group6Layout3: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 3),
@@ -278,7 +276,7 @@ var templates = {
    *
    * @param pictures
    */
-  group6Layout4: function (pictures) {
+  group6Layout4: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 4),
@@ -294,7 +292,7 @@ var templates = {
    *
    * @param pictures
    */
-  group6Layout5: function (pictures) {
+  group6Layout5: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3)
@@ -311,7 +309,7 @@ var templates = {
    *
    * @param pictures
    */
-  group7Layout1: function (pictures) {
+  group7Layout1: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 3),
@@ -329,7 +327,7 @@ var templates = {
    *
    * @param pictures
    */
-  group7Layout2: function (pictures) {
+  group7Layout2: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 4),
@@ -346,7 +344,7 @@ var templates = {
    *
    * @param pictures
    */
-  group7Layout3: function (pictures) {
+  group7Layout3: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 4),
@@ -363,7 +361,7 @@ var templates = {
    *
    * @param pictures
    */
-  group7Layout4: function (pictures) {
+  group7Layout4: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 5),
@@ -380,7 +378,7 @@ var templates = {
    *
    * @param pictures
    */
-  group7Layout5: function (pictures) {
+  group7Layout5: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3, 5),
@@ -398,7 +396,7 @@ var templates = {
    *
    * @param pictures
    */
-  group8Layout1: function (pictures) {
+  group8Layout1: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 3),
@@ -417,7 +415,7 @@ var templates = {
    *
    * @param pictures
    */
-  group8Layout2: function (pictures) {
+  group8Layout2: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 3),
@@ -435,7 +433,7 @@ var templates = {
    *  □ □
    * @param pictures
    */
-  group8Layout3: function (pictures) {
+  group8Layout3: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 4),
@@ -454,7 +452,7 @@ var templates = {
    *
    * @param pictures
    */
-  group8Layout4: function (pictures) {
+  group8Layout4: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 4),
@@ -472,7 +470,7 @@ var templates = {
    *
    * @param pictures
    */
-  group8Layout5: function (pictures) {
+  group8Layout5: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 5),
@@ -489,7 +487,7 @@ var templates = {
    *
    * @param pictures
    */
-  group8Layout6: function (pictures) {
+  group8Layout6: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3, 5),
@@ -506,7 +504,7 @@ var templates = {
    *
    * @param pictures
    */
-  group8Layout7: function (pictures) {
+  group8Layout7: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3, 6),
@@ -524,7 +522,7 @@ var templates = {
    *
    * @param pictures
    */
-  group9Layout1: function (pictures) {
+  group9Layout1: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 3),
@@ -543,7 +541,7 @@ var templates = {
    *
    * @param pictures
    */
-  group9Layout2: function (pictures) {
+  group9Layout2: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 4),
@@ -562,7 +560,7 @@ var templates = {
    *
    * @param pictures
    */
-  group9Layout3: function (pictures) {
+  group9Layout3: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 4),
@@ -581,7 +579,7 @@ var templates = {
    *
    * @param pictures
    */
-  group9Layout4: function (pictures) {
+  group9Layout4: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 4),
@@ -600,7 +598,7 @@ var templates = {
    *
    * @param pictures
    */
-  group9Layout5: function (pictures) {
+  group9Layout5: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 5),
@@ -619,7 +617,7 @@ var templates = {
    *
    * @param pictures
    */
-  group9Layout6: function (pictures) {
+  group9Layout6: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3, 5),
@@ -637,7 +635,7 @@ var templates = {
    *
    * @param pictures
    */
-  group9Layout7: function (pictures) {
+  group9Layout7: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3, 6),
@@ -655,7 +653,7 @@ var templates = {
    *
    * @param pictures
    */
-  group10Layout1: function (pictures) {
+  group10Layout1: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 1),
       pictures.slice(1, 4),
@@ -674,7 +672,7 @@ var templates = {
    *
    * @param pictures
    */
-  group10Layout2: function (pictures) {
+  group10Layout2: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 4),
@@ -693,7 +691,7 @@ var templates = {
    *
    * @param pictures
    */
-  group10Layout3: function (pictures) {
+  group10Layout3: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 5),
@@ -712,7 +710,7 @@ var templates = {
    *
    * @param pictures
    */
-  group10Layout4: function (pictures) {
+  group10Layout4: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 2),
       pictures.slice(2, 5),
@@ -731,7 +729,7 @@ var templates = {
    *
    * @param pictures
    */
-  group10Layout5: function (pictures) {
+  group10Layout5: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3, 5),
@@ -750,7 +748,7 @@ var templates = {
    *
    * @param pictures
    */
-  group10Layout6: function (pictures) {
+  group10Layout6: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3, 5),
@@ -769,7 +767,7 @@ var templates = {
    *
    * @param pictures
    */
-  group10Layout7: function (pictures) {
+  group10Layout7: function(pictures) {
     return this.getHTML([
       pictures.slice(0, 3),
       pictures.slice(3, 6),
@@ -787,9 +785,9 @@ var templates = {
    *
    * @param pictures
    */
-  defaults: function (pictures) {
+  defaults: function(pictures) {
     var ROW_SIZE = 3;
-    var rows = pictures.length / ROW_SIZE + 1;
+    var rows = pictures.length / (ROW_SIZE + 1);
     var pictureArr = [];
 
     for (var i = 0; i < rows; i++) {
@@ -799,7 +797,7 @@ var templates = {
     return this.getHTML(pictureArr);
   },
 
-  getHTML: function (rows) {
+  getHTML: function(rows) {
     var rowHTML = '';
 
     for (var i = 0; i < rows.length; i++) {
@@ -809,15 +807,13 @@ var templates = {
     return '<div class="group-picture-container">' + rowHTML + '</div>';
   },
 
-  getRowHTML: function (pictures) {
+  getRowHTML: function(pictures) {
     return (
-      '<div class="group-picture-row">' +
-        this.getColumnHTML(pictures) +
-      '</div>'
+      '<div class="group-picture-row">' + this.getColumnHTML(pictures) + '</div>'
     );
   },
 
-  getColumnHTML: function (pictures) {
+  getColumnHTML: function(pictures) {
     var columns = [];
     var columnWidth = 100 / pictures.length;
     var columnStyle = ' style="width: ' + columnWidth + '%;"';
@@ -828,6 +824,18 @@ var templates = {
     return columns.join('');
   }
 };
+
+function groupPicture(args, content) {
+  args = args[0].split('-');
+  var group = parseInt(args[0], 10);
+  var layout = parseInt(args[1], 10);
+
+  content = hexo.render.renderSync({text: content, engine: 'markdown'});
+
+  var pictures = content.match(/<img[\s\S]*?>/g);
+
+  return '<div class="group-picture">' + templates.dispatch(pictures, group, layout) + '</div>';
+}
 
 hexo.extend.tag.register('grouppicture', groupPicture, {ends: true});
 hexo.extend.tag.register('gp', groupPicture, {ends: true});

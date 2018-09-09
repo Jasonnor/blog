@@ -4,8 +4,38 @@ the-transition() {
   transition-delay: 0s;
 }
 
+the-transition-ease-in() {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s;
+}
+
+the-transition-ease-out() {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+mobile-smallest() {
+  @media (max-width: 413px) {
+    {block}
+  }
+}
+
+mobile-small() {
+  @media (max-width: 567px) {
+    {block}
+  }
+}
+
 mobile() {
   @media (max-width: 767px) {
+    {block}
+  }
+}
+
+tablet-mobile() {
+  @media (max-width: 991px) {
     {block}
   }
 }
@@ -23,6 +53,12 @@ desktop() {
 }
 
 desktop-large() {
+  @media (min-width: 1200px) {
+    {block}
+  }
+}
+
+desktop-largest() {
   @media (min-width: 1600px) {
     {block}
   }
@@ -30,6 +66,27 @@ desktop-large() {
 
 circle() {
   border-radius: 50%;
+}
+
+transform() {
+  -webkit-transform: arguments
+  -moz-transform: arguments
+  -ms-transform: arguments
+  -o-transform: arguments
+  transform: arguments
+}
+
+hide() {
+  display: none !important;
+}
+
+show() {
+  display: block !important;
+}
+
+fixbutton() {
+  right: 20px;
+  opacity: 0.8;
 }
 
 random-color($min, $max) {

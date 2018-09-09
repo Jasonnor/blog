@@ -1,51 +1,45 @@
 /* global hexo */
 
-/**
- * Merge configs in _data/next.yml into hexo.theme.config.
- * Note: configs in _data/next.yml will override configs in hexo.theme.config.
- */
-hexo.on('generateBefore', function () {
+'use strict';
+
+var merge = require('./merge');
+
+hexo.on('generateBefore', function() {
   if (hexo.locals.get) {
     var data = hexo.locals.get('data');
-    data && data.next && assign(hexo.theme.config, data.next);
-  }
-});
 
+    /**
+     * Merge configs from _data/next.yml into hexo.theme.config.
+     * If `override`, configs in next.yml will rewrite configs in hexo.theme.config.
+     * If next.yml not exists, merge all `theme_config.*` into hexo.theme.config.
+     */
+    if (data && data.next) {
+      if (data.next.override) {
+        hexo.theme.config = data.next;
+      } else {
+        merge(hexo.config, data.next);
+        merge(hexo.theme.config, data.next);
+      }
+    } else {
+      merge(hexo.theme.config, hexo.config.theme_config);
+    }
 
-// https://github.com/sindresorhus/object-assign
-function assign(target, source) {
-  var from;
-  var keys;
-  var to = toObject(target);
+    // Custom languages support. Introduced in NexT v6.3.0.
+    if (data && data.languages) {
+      var lang = this.config.language;
+      var i18n = this.theme.i18n;
 
-  for (var s = 1; s < arguments.length; s++) {
-    from = arguments[s];
-    keys = ownEnumerableKeys(Object(from));
+      var mergeLang = function(lang) {
+        i18n.set(lang, merge(i18n.get([lang]), data.languages[lang]));
+      };
 
-    for (var i = 0; i < keys.length; i++) {
-      to[keys[i]] = from[keys[i]];
+      if (Array.isArray(lang)) {
+        for (var i = 0; i < lang.length; i++) {
+          mergeLang(lang[i]);
+        }
+      } else {
+        mergeLang(lang);
+      }
     }
   }
-
-  return to;
-}
-
-function toObject(val) {
-  if (val == null) {
-    throw new TypeError('Object.assign cannot be called with null or undefined');
-  }
-
-  return Object(val);
-}
-
-function ownEnumerableKeys(obj) {
-  var keys = Object.getOwnPropertyNames(obj);
-
-  if (Object.getOwnPropertySymbols) {
-    keys = keys.concat(Object.getOwnPropertySymbols(obj));
-  }
-
-  return keys.filter(function (key) {
-    return Object.prototype.propertyIsEnumerable.call(obj, key);
-  });
-}
+});

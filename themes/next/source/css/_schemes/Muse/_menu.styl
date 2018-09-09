@@ -5,8 +5,10 @@
     top: 52px;
     margin: 0;
     width: 100%;
+    padding: 0;
     background: white;
     border-bottom: 1px solid $gray-lighter;
+    z-index: $zindex-3;
   }
 }
 
@@ -16,17 +18,43 @@
 .menu .menu-item {
   +mobile() {
     display: block;
-    margin-left: 0;
+    margin: 0 10px;
     vertical-align: top;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 1px 4px;
+    margin-left: 5px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    background-color: $gainsboro;
+    +mobile() {
+      float: right;
+      margin: 0.35em 0 0 0;
+    }
   }
 
   br {
     +mobile() { display: none; }
   }
+
+  a {
+    +mobile() {
+      padding: 5px 10px;
+      border-bottom-color: white !important;
+    }
+  }
+  .fa { margin-right: 0; }
 }
 
-.menu .menu-item-icon {
+.menu-item-active a {
+  border-bottom-color: $menu-link-hover-border !important;
+  color: $black-deep;
+
   +mobile() {
-    font-size: 15px;
+    border-bottom-color: white !important;
   }
 }

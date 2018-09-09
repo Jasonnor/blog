@@ -1,23 +1,39 @@
 .use-motion .sidebar .motion-element { opacity: 1; }
 
 .sidebar {
-  display: none;
+  margin-left: -100%;
   right: auto;
   bottom: auto;
-  -webkit-transform: none
+
+  // Do NOT delete this line
+  // or Affix (position: fixed) will not work in Google Chrome.
+  -webkit-transform: none;
 }
 
 
 .sidebar-inner {
+//padding: 20px 10px 0;
   box-sizing: border-box;
-  width: 240px;
+  width: $sidebar-desktop;
   color: $text-color;
   background: white;
-  &.affix { top: 0px; position: fixed; }
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  if (hexo-config('motion.enable') and hexo-config('motion.transition.sidebar')) { opacity: 0; }
+
+  &.affix {
+    position: fixed;
+    top: $sidebar-offset;
+  }
+
+  &.affix-bottom {
+    position: absolute;
+  }
+
 }
 
 .site-overview {
-  margin: 0 10px;
+  //margin: 0 2px;
   text-align: left;
 }
 
@@ -25,36 +41,24 @@
   clearfix();
 }
 
-.site-author-image {
-  float: left;
-  margin-right: 10px;
-  max-width: 64px;
-  border-width: 1px;
-  border-color: $gainsboro;
-}
-.site-author-name {
-  margin: 0;
-  font-weight: $font-weight-bold;
-}
-
-.site-description {
-  margin-top: 0;
-  line-height: 1.6;
-}
-
-.sidebar a {
+.sidebar a,
+.sidebar .exturl {
   color: $black-light;
+
   &:hover { color: $black-deep; }
 }
 
+.site-state-item {
+  padding: 0 10px;
+}
+
 .links-of-author-item {
-  a:before { display: none; }
-  a {
+  a:before, .exturl:before { display: none; }
+  a, .exturl {
     border-bottom: none;
     text-decoration: underline;
   }
 }
-
 
 .feed-link {
   border-top: 1px dotted $grey-light;
@@ -62,7 +66,6 @@
   text-align: center;
 }
 
-$orange = #fc6423;
 .feed-link a {
   display: block;
   color: $orange;
@@ -76,25 +79,51 @@ $orange = #fc6423;
   }
 }
 
+.links-of-author {
+  //clearfix();
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .exturl {
+    font-size: 13px;
+  }
+}
 .links-of-author-item {
-  display: inline-block;
-  width: 48%;
-  a {
-    box-sizing: border-box;
+  sidebar-inline-links-item();
+
+  a, .exturl {
     display: block;
-    margin-right: 0;
-    padding: 0 5px;
     text-decoration: none;
+
     &:hover {
       border-radius: 4px;
       background: $gainsboro;
     }
   }
+
   .fa {
-    margin-right: 4px;
+    margin-right: 2px;
     font-size: 16px;
   }
   .fa-globe { font-size: 15px; }
 }
 
-.post-toc ol { padding: 0 20px 10px; }
+
+.links-of-blogroll {
+  text-align: center;
+  margin-top: 20px;
+  padding: 3px 0 0;
+  border-top: 1px dotted $grey-light;
+}
+.links-of-blogroll-title { margin-top: 0; }
+.links-of-blogroll-item { padding: 0; }
+.links-of-blogroll-inline {
+  clearfix();
+
+  .links-of-blogroll-item {
+    sidebar-inline-links-item();
+    display: inline-block;
+    if !hexo-config('social_icons.icons_only') { width: unset; }
+  }
+}

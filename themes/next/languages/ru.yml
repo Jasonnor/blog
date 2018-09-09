@@ -1,69 +1,73 @@
+---
 title:
   archive: Архив
   category: Категория
   tag: Тэг
-
-author: Author
-
+  schedule: Календарь
 menu:
-  home: Домой
+  home: Главная
   archives: Архив
   categories: Категории
   tags: Тэги
   about: О сайте
-  search: поиск
-
+  search: Поиск
+  schedule: Календарь
+  sitemap: Карта сайта
+  commonweal: Страница 404
 sidebar:
   overview: Обзор
   toc: Содержание
-
 post:
-  sticky: Sticky
-  posted: отправлено
-  in: в
-  read_more: Читать дальше
+  posted: Размещено
+  edited: Изменено
+  created: Создано
+  modified: Изменено
+  edit: Редактировать запись
+  in: в категории
+  more: more
+  read_more: Читать полностью
   untitled: Без имени
-  toc_empty: Этот пост не имеет оглавления
-
+  sticky: Ссылка
+  toc_empty: Эта запись без оглавления
+  views: Просмотров
+  comments_count: Комментариев
+  related_posts: Похожие записи
+  copy_button: Скопировать
+  copy_success: Скопировано!
+  copy_failure: Ошибка копирования!
+  copyright:
+    author: Автор записи
+    link: Ссылка на запись
+    license_title: Информация об авторских правах
+    license_content: "Все записи на этом сайте защищены лицензией %s, если не указано дополнительно."
 page:
   totally: Всего
   tags: тэги
-
 footer:
-  powered: "Powered by %s"
-  theme: Theme
-
+  powered: "Генератор — %s"
+  theme: Тема
+  total_views: Всего просмотров
+  total_visitors: Всего посетителей
 counter:
   tag_cloud:
-    zero: Нет тэгов
-    one: 1 тэг
-    two: "%d тэга всего"
-    three: "%d тэга всего"
-    four: "%d тэга всего"
-    other: "%d тэгов всего"
-
+    zero: Нет тэгов.
+    one: 1 тэг.
+    other: "%d тэгов всего."
   categories:
-    zero: Нет категорий
-    one: 1 категория
-    two: "%d категории всего"
-    three: "%d категории всего"
-    four: "%d категории всего"
-    other: "%d категорий всего"
-
+    zero: Нет категорий.
+    one: 1 категория.
+    other: "%d категорий всего."
   archive_posts:
     zero: Нет записей.
     one: 1 запись.
-    two: "%d записи всего."
-    three: "%d записи всего."
-    four: "%d записи всего."
     other: "%d записей всего."
-
 state:
-  posts: записи
-  pages: страницы
-  tags: тэги
-  categories: категории
-
+  posts: Архив
+  pages: Страницы
+  tags: Тэги
+  categories: Категории
+search:
+  placeholder: Поиск...
 cheers:
   um: Эм..
   ok: OK
@@ -71,9 +75,24 @@ cheers:
   good: Хорошо
   great: Замечательно
   excellent: Великолепно
-
 keep_on: Продолжаю писать.
-
 symbol:
-  comma: ', '
-  period: '. '
+  comma: ", "
+  period: ". "
+  colon: ": "
+reward:
+  donate: Донат
+  wechatpay: WeChat Pay
+  alipay: Alipay
+  bitcoin: Bitcoin
+gitmentbutton: Открыть Gitment комментарии
+accessibility:
+  nav_toggle: Показать/скрыть меню
+  prev_page: Предыдущая страница
+  next_page: Следующая страница
+symbols_count_time:
+  count: Кол-во символов в статье
+  count_total: Общее кол-во символов
+  time: Время чтения
+  time_total: Общее время чтения
+  time_minutes: мин.
