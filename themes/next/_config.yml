@@ -195,7 +195,7 @@ avatar:
   # in theme directory(source/images): /images/avatar.gif
   # in site  directory(source/uploads): /uploads/avatar.gif
   # You can also use other linking images.
-  url: #/images/avatar.jpg
+  url: /images/avatar.jpg
   # If true, the avatar would be dispalyed in circle.
   rounded: false
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
@@ -566,14 +566,14 @@ needmoreshare2:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: wOgmZFotz8seZFWZPvZljp5AWrR2vpoup-3LBX8OVlk
 
 # Google Analytics
 google_analytics: UA-49550932-3
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-#bing_site_verification:
+bing_site_verification: 3BDCFECA73036E90C8F629F8CC7075D7
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
