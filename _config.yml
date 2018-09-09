@@ -1,5 +1,5 @@
 # Hexo Configuration
-## Docs: http://hexo.io/docs/configuration.html
+## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
@@ -42,7 +42,16 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
-
+  
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+  
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -64,35 +73,43 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: next
-avatar: /images/avatar.jpg
-since: 2016
-google_analytics: UA-49550932-3
-#swiftype_key: SHEbDTQmQkdNYnk4tvcK
 
-# Deployment
+# Deployment (hexo-deployer-git)
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: git@github.com:Jasonnor/jasonnor.github.io.git
 
-# Feed
-## Using hexo-generator-feed
+# hexo-all-minifier
+all_minifier: true
+
+# hexo-admin
+
+# hexo-generator-sitemap
+sitemap:
+    path: sitemap.xml
+
+# hexo-generator-feed
 feed:
   type: atom
   path: atom.xml
-  limit: false
+  limit: 20
   hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
 
 # Robots.txt
 ## Using hexo-generator-robotstxt
-robotstxt:
-  useragent: "*"
-  disallow:
+#robotstxt:
+#  useragent: "*"
+#  disallow:
   #  - /one_file_to_disallow.html
   #  - /2nd_file_to_disallow.html
   #  - /3rd_file_to_disallow.html
-  allow:
+#  allow:
   #  - /one_file_to_allow.html
   #  - /2nd_file_to_allow.html
   #  - /3rd_file_to_allow.html
-  sitemap: http://jasonnor.github.io/sitemap.xml
+#  sitemap: http://jasonnor.github.io/sitemap.xml
