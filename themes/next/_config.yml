@@ -252,6 +252,9 @@ sidebar:
   # Enable sidebar on narrow view (only for Muse | Mist).
   onmobile: false
 
+  # Author description of sidebar
+  description: 關注互聯網和技術
+
 
 # ---------------------------------------------------------------
 # Post Settings
