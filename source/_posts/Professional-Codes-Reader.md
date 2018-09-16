@@ -12,14 +12,21 @@ date: 2016-02-03 15:51:00
 updated: 2017-06-16 00:00:00
 ---
 {% asset_img browser.jpg %}
+
 ## 發想
+
 最近我在實習閒暇之餘，會逛一些科技網站來充實自己，不過身在一個拚勁十足的上市公司，隨時都有人能看到你的螢幕，我這個人臉皮薄，不好意思讓別人看到自己沒在工作，於是想了想，看什麼類型的文章才不會顯得特別突兀？
 
 瞬間想到的答案：**含有程式的文章**。
 
 不管是查資料、Debug、找API，畫面上似乎都會有一行行的程式來顯示這個頁面的專業性，想想如果看到同事在瀏覽Stack Overflow，你應該不會認為這傢伙是在偷懶，反而會同情他又有哪個專案趕不完正努力著──這就是我想要的效果！
 
+Repo：[https://github.com/Jasonnor/Professional-Codes-Reader](https://github.com/Jasonnor/Professional-Codes-Reader)
+
+<!-- more -->
+
 ## 實作
+
 要讓文章含有程式碼片段，直覺來想就是：「每隔幾個段落，插入隨機的程式碼」，其中比較麻煩的是如何定義段落。於是我先用C#寫了個簡單的WinForms Application作為模擬，基本流程如下：
 1. 輸入文字檔並生成隨機程式陣列
 2. 讀取段落（以行為單位），插入程式陣列
@@ -47,7 +54,7 @@ updated: 2017-06-16 00:00:00
 
 ## 使用說明
 ![Logo](https://raw.githubusercontent.com/Jasonnor/Professional-Codes-Reader/master/assets/logo440x280.png)
-### Chrome Extension版本（需要Google Chrome）
+### Chrome Extension版本
   1. 到[這裡](https://chrome.google.com/webstore/detail/professional-codes-reader/bmiklhlglhkagnpamkmdhgpbiolnbgac)安裝擴充功能，然後跳到第六步
   2. 或者也可以到[Releases頁面](https://github.com/Jasonnor/Professional-Codes-Reader/releases)下載最新版.crx檔案
   3. 開啟Chrome的[擴充功能頁面](chrome://extensions/)（可以複製到網址列開啟）

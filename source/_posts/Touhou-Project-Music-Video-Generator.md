@@ -8,13 +8,15 @@ date: 2018-09-09 20:17:00
 ---
 ![preview](https://github.com/Jasonnor/th-music-video-generator/raw/master/images/demo/main.gif)
 
-項目地址：https://github.com/Jasonnor/th-music-video-generator
+Repo：[https://github.com/Jasonnor/th-music-video-generator](https://github.com/Jasonnor/th-music-video-generator)
 
-連結：https://jasonnor.github.io/th-music-video-generator/
+連結：[https://jasonnor.github.io/th-music-video-generator](https://jasonnor.github.io/th-music-video-generator)
 
 ## 動機
 
 最近想做個東方原曲個人向Top50，編排MV過程中，覺得部分元素可以自動化產生（例如進場配圖、遊戲畫面皆能爬蟲取得），而且比較少有同時包含配圖和彈幕畫面的原曲MV（個人認為彈幕也是欣賞東方原曲不可缺少的要素之一），於是萌生了這個項目的概念。
+
+<!-- more -->
 
 ## 實作
 

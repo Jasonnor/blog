@@ -9,18 +9,19 @@ categories:
   - 個人開發
 date: 2018-09-17 02:02:00
 ---
-
 ![preview](https://raw.githubusercontent.com/Jasonnor/tf-idf-python/master/demo/result01.png)
 
 *Figure 1: 輸入「笑傲江湖」文件集合，每份文件為小說中的一個章回，輸出每章前 K 高的字詞和其權重。*
-
-項目連結：[https://github.com/Jasonnor/tf-idf-python](https://github.com/Jasonnor/tf-idf-python)
 
 ## 簡介
 
 tf-idf（term frequency－inverse document frequency）是一種用於資訊檢索與文字探勘的常用加權技術，為一種統計方法，評估字詞對於「文件集合」或「語料庫中的一份文件」的重要程度。詳細方法和公式可參見[Wikipedia](https://zh.wikipedia.org/wiki/Tf-idf)，不再贅述。
 
 本項目為實作 tf-idf ，輸入給定「一組有特定集合關系的文件」（例如某本小說），輸出為每份文件的 tf-idf 權重值結果，具體為顯示前 k 高的「字詞」和其權重值，如 Figure 1 所示。另外也可以輸入某個字詞，輸出該字詞在所有文件中的權重值。
+
+Repo：[https://github.com/Jasonnor/tf-idf-python](https://github.com/Jasonnor/tf-idf-python)
+
+<!-- more -->
 
 因為中文無法像英文可以藉由空白來區隔字詞，我們采用了 [jieba 結巴中文分詞](https://github.com/fxsjy/jieba)，將文件集合先進行分詞獲得語料庫，之後使用 tf-idf 演算法取得字詞加權值。
 
