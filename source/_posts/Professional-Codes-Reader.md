@@ -25,6 +25,13 @@ Repo：[https://github.com/Jasonnor/Professional-Codes-Reader](https://github.co
 
 <!-- more -->
 
+<span hidden itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+  <img src="https://jasonnor.github.io/2016/02/03/Professional-Codes-Reader/browser.jpg"/>
+  <meta itemprop="url" content="https://jasonnor.github.io/2016/02/03/Professional-Codes-Reader/browser.jpg">
+  <meta itemprop="width" content="60">
+  <meta itemprop="height" content="60">
+</span>
+
 ## 實作
 
 要讓文章含有程式碼片段，直覺來想就是：「每隔幾個段落，插入隨機的程式碼」，其中比較麻煩的是如何定義段落。於是我先用C#寫了個簡單的WinForms Application作為模擬，基本流程如下：

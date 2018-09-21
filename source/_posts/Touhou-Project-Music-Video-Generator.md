@@ -18,6 +18,13 @@ Repo：[https://github.com/Jasonnor/th-music-video-generator](https://github.com
 
 <!-- more -->
 
+<span hidden itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+  <img src="https://github.com/Jasonnor/th-music-video-generator/raw/master/images/demo/image01.png"/>
+  <meta itemprop="url" content="https://github.com/Jasonnor/th-music-video-generator/raw/master/images/demo/image01.png">
+  <meta itemprop="width" content="60">
+  <meta itemprop="height" content="60">
+</span>
+
 ## 實作
 
 基本想法是曲子開始後，先顯示兩張隨機圖片，每張各6秒，之後無縫接上遊戲對應的關卡影片，中間皆以淡入淡出來轉場。事前我先建立了簡單的資料庫，包含了曲名、對應角色（標簽）和關卡等，根據標簽從pixiv爬好並篩選了近兩千張高收藏數的作品，使用Google Data API來爬Youtube上的遊戲影片ID，之後逐漸完善播放器和生成邏輯。目前成品Demo（加速版）如上圖。

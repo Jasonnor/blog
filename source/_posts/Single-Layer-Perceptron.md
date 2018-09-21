@@ -18,6 +18,13 @@ Repo：https://github.com/Jasonnor/Perceptron
 
 <!-- more -->
 
+<span hidden itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+  <img src="https://raw.githubusercontent.com/Jasonnor/Perceptron/master/assets/resultA.png"/>
+  <meta itemprop="url" content="https://raw.githubusercontent.com/Jasonnor/Perceptron/master/assets/resultA.png">
+  <meta itemprop="width" content="60">
+  <meta itemprop="height" content="60">
+</span>
+
 {% asset_img environment.png %}
 
 本程式以Java開發，圖形介面使用Java Swing & GUI Bulider，同時也是第一次使用[IntelliJ IDEA](https://www.jetbrains.com/idea/)這個JetBrains開發的IDE，相較免費的Eclips，實用的快捷鍵和人性化的介面是其一大優勢。

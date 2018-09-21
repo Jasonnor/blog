@@ -23,6 +23,13 @@ Repo：[https://github.com/Jasonnor/tf-idf-python](https://github.com/Jasonnor/t
 
 <!-- more -->
 
+<span hidden itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+  <img src="https://raw.githubusercontent.com/Jasonnor/tf-idf-python/master/demo/result01.png"/>
+  <meta itemprop="url" content="https://raw.githubusercontent.com/Jasonnor/tf-idf-python/master/demo/result01.png">
+  <meta itemprop="width" content="60">
+  <meta itemprop="height" content="60">
+</span>
+
 因為中文無法像英文可以藉由空白來區隔字詞，我們采用了 [jieba 結巴中文分詞](https://github.com/fxsjy/jieba)，將文件集合先進行分詞獲得語料庫，之後使用 tf-idf 演算法取得字詞加權值。
 
 預設測試資料位於 data 資料夾底下，每組文件以 01 ~ 99.txt 格式命名，並放置到各別所屬集合的資料夾，例如 data/笑傲江湖/01.txt 。測試資料包含笑傲江湖、創世紀、出埃及記。
