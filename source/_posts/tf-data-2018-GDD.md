@@ -10,7 +10,7 @@ date: 2018-09-21 19:30:00
 ---
 ![](https://i.imgur.com/nBLUAAs.png)
 
-> 本篇文章受[掘金](https://juejin.im/)邀請撰寫，更多GCC 2018演講介紹歡迎前往：[2018 Google 開發者大會 掘金專題](https://juejin.im/e/gdd)
+> 本篇文章受[掘金邀請撰寫](https://juejin.im/post/5ba4b2a7f265da0ab719aa7e)，更多GCC 2018演講介紹歡迎前往：[2018 Google 開發者大會 掘金專題](https://juejin.im/e/gdd)
 
 GDD 2018 第二天的 9 月 21 日 ，陳爽（Google Brain 軟體工程師）為我們帶來了《以 tf.data 優化訓練數據》，講解如何使用 tf.data 為各類模型打造高性能的 TensorFlow 輸入渠道，本文將摘錄演講技術干貨。
 
