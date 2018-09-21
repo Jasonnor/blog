@@ -30,8 +30,8 @@
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="{{ title }}">
       <span hidden itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
-        <img src="/favicon/android-chrome-512x512.png"/>
-        <meta itemprop="url" content="/favicon/android-chrome-512x512.png">
+        <img src="https://jasonnor.github.io/favicon/android-chrome-512x512.png"/>
+        <meta itemprop="url" content="https://jasonnor.github.io/favicon/android-chrome-512x512.png">
         <meta itemprop="width" content="60">
         <meta itemprop="height" content="60">
       </span>
