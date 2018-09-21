@@ -8,7 +8,7 @@ categories:
   - 機器學習
 date: 2018-09-21 19:30:00
 ---
-![](https://i.imgur.com/nBLUAAs.png)
+![preview](https://i.imgur.com/nBLUAAs.png)
 
 > 本篇文章受[掘金邀請撰寫](https://juejin.im/post/5ba4b2a7f265da0ab719aa7e)，更多GCC 2018演講介紹歡迎前往：[2018 Google 開發者大會 掘金專題](https://juejin.im/e/gdd)
 
@@ -16,11 +16,18 @@ GDD 2018 第二天的 9 月 21 日 ，陳爽（Google Brain 軟體工程師）�
 
 <!-- more -->
 
+<span hidden itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+  <img src="https://i.imgur.com/nBLUAAs.png"/>
+  <meta itemprop="url" content="https://i.imgur.com/nBLUAAs.png">
+  <meta itemprop="width" content="60">
+  <meta itemprop="height" content="60">
+</span>
+
 ## 資料輸入管道
 
-* 大多人將時間和金錢花在神經網路架構上，資料輸入容易被忽略
-* 沒有好的資料輸入管道，GPU 再強速度也不會顯著提高
-* 目標：高效、靈活、易用
+- 大多人將時間和金錢花在神經網路架構上，資料輸入容易被忽略
+- 沒有好的資料輸入管道，GPU 再強速度也不會顯著提高
+- 目標：高效、靈活、易用
 
 ## ETL 系統
 
@@ -57,6 +64,7 @@ dataset = dataset.apply(tf.contrib.data.map_and_batch(lambda x: ..., BATCH_SIZE)
 ```python
 dataset = dataset.apply(tf.contrib.data.prefetch_to_device("/gpu:0"))
 ```
+
 ![](https://i.imgur.com/GIq5KCE.png)
 
 最終程式如下圖所示，更多優化手段可以參考 [tf.data 性能指南](https://www.tensorflow.org/performance/datasets_performance)：
@@ -73,8 +81,8 @@ dataset = dataset.apply(tf.contrib.data.prefetch_to_device("/gpu:0"))
 
 ### 支持不同語言與資料類型
 
-* 使用 Dataset.form_generator() 支持 Python 程式生成 Dataset
-* 使用 DatasetOpKernel 和 tf.load_op_library 支持自定義 C++ 資料處理程式
+- 使用 Dataset.form_generator() 支持 Python 程式生成 Dataset
+- 使用 DatasetOpKernel 和 tf.load_op_library 支持自定義 C++ 資料處理程式
 
 如下圖，使用 Python 自帶的 urllib 獲取伺服器資料，存入 dataset：
 
@@ -85,12 +93,14 @@ dataset = dataset.apply(tf.contrib.data.prefetch_to_device("/gpu:0"))
 如普通文件系統、GCP 雲儲存、其他雲儲存、SQL 數據庫等。
 
 讀取 Google 雲儲存的 TFRecord 文件示例：
+
 ```python
 files = tf.contrib.data.TFRecordDataset(
   "gs://path/to/file.tfrecord", num_parallel_reads=32)
 ```
 
 使用自訂 SQL 資料庫示例：
+
 ```python
 files = tf.contrib.data.SqlDataset(
   "sqllite", "/foo/db.sqlite", "SELECT name, age FROM people", 
@@ -120,6 +130,7 @@ dataset = tf.contrib.data.make_batched_features_dataset(
 ```
 
 使用 CSV 資料集的情境：
+
 ```python
 dataset = tf.contrib.data.make_csv_dataset(
   "*.csv", BATCH_SIZE, num_epochs=NUM_EPOCHS)
@@ -128,6 +139,7 @@ dataset = tf.contrib.data.make_csv_dataset(
 ### 使用 AUTOTUNE 自動調節管道
 
 可以簡單的使用 AUTOTUNE 找到 prefetching 的最佳參數：
+
 ```python
 dataset = dataset.prefetch(tf.contrib.data.AUTOTUNE)
 ```
@@ -141,16 +153,16 @@ def input_fn():
     dataset = tf.contrib.data.make_csv_dataset(
       "*.csv", BATCH_SIZE, num_epochs=NUM_EPOCHS)
     return dataset
-   
+
 tf.estimator.Estimator(model_fn=train_model).train(input_fn=input_fn)
 ```
 
 ## 實際運用經驗
 
-* 原始 tf.data 資料輸入程式： ~150 圖像 / 秒
-* 管道化的 tf.data 資料輸入程式： ~1,750 圖像 / 秒 => **12倍的性能！**
-* Cloud TPU 上使用 tf.data： ~4,100 圖像 / 秒
-* Cloud TPU Pod 上使用 tf.data： ~219,000 圖像 / 秒
+- 原始 tf.data 資料輸入程式： ~150 圖像 / 秒
+- 管道化的 tf.data 資料輸入程式： ~1,750 圖像 / 秒 => **12倍的性能！**
+- Cloud TPU 上使用 tf.data： ~4,100 圖像 / 秒
+- Cloud TPU Pod 上使用 tf.data： ~219,000 圖像 / 秒
 
 ## 結論
 
@@ -158,10 +170,10 @@ tf.estimator.Estimator(model_fn=train_model).train(input_fn=input_fn)
 
 ## 資源
 
-* 入門指南
-    * [www.tensorflow.org/guide/datasets](https://www.tensorflow.org/guide/datasets)
-    * [www.tensorflow.org/performance/datasets_performance](https://www.tensorflow.org/performance/datasets_performance)
-* 示例程式
-    * [github.com/tensorflow/benchmarks](https://github.com/tensorflow/benchmarks)
-    * [github.com/tensorflow/models](https://github.com/tensorflow/models)
-    * [github.com/tensorflow/tpu](https://github.com/tensorflow/tpu)
+- 入門指南
+  - [www.tensorflow.org/guide/datasets](https://www.tensorflow.org/guide/datasets)
+  - [www.tensorflow.org/performance/datasets_performance](https://www.tensorflow.org/performance/datasets_performance)
+- 示例程式
+  - [github.com/tensorflow/benchmarks](https://github.com/tensorflow/benchmarks)
+  - [github.com/tensorflow/models](https://github.com/tensorflow/models)
+  - [github.com/tensorflow/tpu](https://github.com/tensorflow/tpu)
