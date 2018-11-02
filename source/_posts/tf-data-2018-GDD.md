@@ -121,7 +121,7 @@ for batch in dataset:
 
 ![](https://i.imgur.com/kpSFS08.png)
 
-可以簡單替換為一個函數：
+上圖可以簡單替換為一個函數：
 
 ```python
 dataset = tf.contrib.data.make_batched_features_dataset(

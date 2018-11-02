@@ -1,4 +1,4 @@
-title: 基於Python的tf-idf文字探勘演算法實現：以《笑傲江湖》為例子
+title: 基於 Python 的 tf-idf 文字探勘演算法實現：以《笑傲江湖》為例子
 author: Jasonnor
 tags:
   - Python

@@ -1,4 +1,4 @@
-title: 單層感知機（Perceptron）實作：使用Java Swing
+title: 單層感知機（Perceptron）實作：使用 Java Swing
 author: Jasonnor
 tags:
   - Java
