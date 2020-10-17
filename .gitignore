@@ -4,5 +4,11 @@ public/
 .deploy_git/
 .npmignore
 db.json
-debug.log
-npm-debug.log
+*.log
+
+# Editors & IDE
+.vscode
+.idea
+
+# macOS
+.DS_Store
